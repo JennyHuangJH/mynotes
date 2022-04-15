@@ -53,7 +53,7 @@ a {
 
 .container {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   color: var(--color-text);
   background-color: var(--color-bg);
   display: flex;
@@ -63,12 +63,18 @@ a {
 
 .app {
   width: 100%;
-  max-width: 480px;
-  height: 88vh;
+  height: 100dvh;
   margin: 0 auto;
   background-color: var(--color-white);
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.05);
   position: relative;
+}
+
+@media screen and (min-width: 400px) {
+  .app {
+  max-width: 480px;
+  height: 88vh;
+}
 }
 
 
@@ -79,6 +85,9 @@ a {
   justify-content: space-between;
   background-color: var(--color-lighter);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0px;
+
 }
 
 .app-header h1 {
@@ -235,6 +244,8 @@ a {
   height: 70vh;
   resize: none;
   scrollbar-width: none; /* Firefox */
+  caret-color: var(--color-main);
+  
 }
 
 .note textarea:active,
